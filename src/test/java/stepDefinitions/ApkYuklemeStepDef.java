@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ApkYuklemeStepDef {
     AndroidDriver<AndroidElement>androidDriver;
+    //bu sekilde driver tanimlamak, sadece android elementlere gidecegini gösterir, daha güvenli bir calisma saglar
 
     @Given("Kullanici {string} cihaza yukler")
     public void kullanici_cihaza_yukler(String ApkDosyaYolu) throws MalformedURLException {

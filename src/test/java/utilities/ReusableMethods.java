@@ -29,6 +29,12 @@ public class ReusableMethods {
         driver.findElementByXPath("//*[@text='" + elementText + "']").click();
     }
 
+    public static void scrollWithUiScrollable(String elementText){
+        AndroidDriver driver = (AndroidDriver)  Driver.getAndroidDriver();
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + elementText + "\"))");
+    }
+
+
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -43,6 +49,18 @@ public class ReusableMethods {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
+
+
+    public static void ekranKaydirmaMethodu(int xbaslangickoordinati, int ybaslangickoordinati, int beklemesuresi, int xbitiskoordinati, int ybitiskoordinati){
+        TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
+        action.press(PointOption.point(xbaslangickoordinati,ybaslangickoordinati)).
+                waitAction(WaitOptions.waitOptions(Duration.ofMillis(beklemesuresi))).
+                moveTo(PointOption.point(xbitiskoordinati,ybitiskoordinati)).
+                release().perform();
+
+    }
+
+
 
 
 
