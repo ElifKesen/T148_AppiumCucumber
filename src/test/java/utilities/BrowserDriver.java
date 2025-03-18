@@ -15,7 +15,7 @@ public class BrowserDriver {
     private static AndroidDriver<AndroidElement> appiumDriver;
     private static IOSDriver<IOSElement> iosDriver;
 
-    static final String TELEFONADI="Pixel 148";
+    static final String TELEFONADI="Pixel 4 yeni";
     static final String ANDROIDVERSION="10.0";
     static final String PLATFORM="Android";
     static final String OTOMASYON_ISMI="UiAutomator2";
@@ -38,7 +38,7 @@ public class BrowserDriver {
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, PLATFORM);
             caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, OTOMASYON_ISMI);
             caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
-            //caps.setCapability("chromedriverExecutable","C:\\Users\\elifk\\IdeaProjects\\T148_AppiumCucamber\\Driver\\chromedriver.exe");
+           // caps.setCapability("chromedriverExecutable","C:\\Users\\elifk\\IdeaProjects\\T148_AppiumCucamber\\Driver\\chromedriver.exe");
 
             //Eger browserName ile test calismazsa 41. satirdaki caps i de yorumdan cikararak 40 ve 41. satirlari ikisini birlikte kullaniyoruz
 
